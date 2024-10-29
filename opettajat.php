@@ -6,10 +6,16 @@
     <title>Kurssienhallinta</title>
 </head>
 <body>
-    <h1>Kurssienhallinta</h1>
+    <header>
+        <?php
+            include("nav.html");
+        ?>
+    </header>
+    <main>
+    <h1>Kurssienhallinta: Opettajat</h1>
     <?php
-        include("nav.html");
         include("opettajat-list.php");
     ?>
+    </main>
 </body>
 </html>

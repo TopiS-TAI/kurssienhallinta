@@ -6,10 +6,16 @@
     <title>Kurssienhallinta</title>
 </head>
 <body>
-    <h1>Kurssienhallinta</h1>
+    <header>
+        <?php
+            include("nav.html");
+        ?>
+    </header>
+    <main>
+    <h1>Kurssienhallinta: Tilat</h1>
     <?php
-        include("nav.html");
         include("tilat-list.php");
     ?>
+    </main>
 </body>
 </html>

@@ -14,9 +14,13 @@
     $query->execute();
     $kirjautumiset = $query->fetchAll();
 
-    foreach($kirjautumiset as $kirjautuminen) { ?>
+    foreach($kirjautumiset as $key=>$kirjautuminen) { ?>
         <tr>
-            <td><?php echo htmlspecialchars($kirjautuminen['nimi']);?></td>
+            <td><?php
+                    if ($key == 0 or $kirjautumiset[$key - 1]['nimi'] != $kirjautumiset[$key]['nimi']) {
+                        echo htmlspecialchars($kirjautuminen['nimi']);
+                    }
+                ?></td>
             <td><?php echo htmlspecialchars($kirjautuminen['etunimi'] . " " . $kirjautuminen['sukunimi']);?></td>
             <td><?php echo date_format(new DateTime($kirjautuminen['kirjautumisaika']), "d.m.Y h:m");?></td>
         </tr>

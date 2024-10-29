@@ -6,10 +6,13 @@
     <title>Kurssienhallinta</title>
 </head>
 <body>
-    <h1>Kurssienhallinta</h1>
-    <?php
-        include("nav.html");
-        include("kirjautumiset-list.php");
-    ?>
+    <header>
+        <?php
+            include("nav.html");
+        ?>
+    </header>
+    <main>
+        <h1>Kurssienhallinta</h1>
+    </main>
 </body>
 </html>
