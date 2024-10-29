@@ -9,7 +9,7 @@
     <h1>Kurssienhallinta</h1>
     <?php
         include("nav.html");
-        include("kirjautumiset.php");
+        include("kirjautumiset-list.php");
     ?>
 </body>
 </html>

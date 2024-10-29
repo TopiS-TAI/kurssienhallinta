@@ -9,7 +9,7 @@
     <h1>Kurssienhallinta</h1>
     <?php
         include("nav.html");
-        include("tilat-list.php");
+        include("opiskelijat-list.php");
     ?>
 </body>
 </html>
