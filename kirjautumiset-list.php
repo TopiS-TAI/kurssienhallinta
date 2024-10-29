@@ -9,7 +9,10 @@
         </thead>
 <?php
     include("connect.php");
-    $sql = "SELECT kurssikirjautumiset.kirjautumisaika, opiskelijat.etunimi, opiskelijat.sukunimi, kurssit.nimi FROM kurssikirjautumiset, opiskelijat, kurssit WHERE kurssikirjautumiset.kurssi = kurssit.id AND kurssikirjautumiset.opiskelija = opiskelijat.id ORDER BY kurssit.nimi;";
+    $sql = "SELECT kk.id, k.nimi as kurssin_nimi, o.etunimi, o.sukunimi, kk.kirjautumisaika
+    FROM kurssikirjautumiset kk, opiskelijat o, kurssit k
+    WHERE kk.opiskelija = o.id AND kk.kurssi = k.id
+    ORDER BY kk.kurssi;";
     $query = $conn->prepare($sql);
     $query->execute();
     $kirjautumiset = $query->fetchAll();
@@ -17,8 +20,8 @@
     foreach($kirjautumiset as $key=>$kirjautuminen) { ?>
         <tr>
             <td><?php
-                    if ($key == 0 or $kirjautumiset[$key - 1]['nimi'] != $kirjautumiset[$key]['nimi']) {
-                        echo htmlspecialchars($kirjautuminen['nimi']);
+                    if ($key == 0 or $kirjautumiset[$key - 1]['kurssin_nimi'] != $kirjautumiset[$key]['kurssin_nimi']) {
+                        echo htmlspecialchars($kirjautuminen['kurssin_nimi']);
                     }
                 ?></td>
             <td><?php echo htmlspecialchars($kirjautuminen['etunimi'] . " " . $kirjautuminen['sukunimi']);?></td>
