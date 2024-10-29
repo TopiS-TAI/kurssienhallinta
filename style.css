@@ -1,0 +1,56 @@
+html {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #CCC;;
+}
+
+body {
+    padding: 0 2em;
+}
+
+header, main {
+    max-width: 60em;
+    margin: 0 auto
+}
+
+section.kurssit {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    & > * {
+        flex-basis: 16em;
+        flex-grow: 1;
+    }
+}
+
+.kurssi-info {
+    background-color: #EEE;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    h2 {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+        border-bottom: 1px solid #CCC;
+    }
+    .kurssi-detaljit {
+        font-size: 0.9em;
+        color: #666;
+        & > * {
+            margin: 0;
+        }
+    }
+    .kurssi-kuvaus {
+        flex-grow: 1;
+    }
+    .kurssi-opiskelijat {
+        summary {
+            color: #4d743d;
+            cursor: pointer;
+            list-style-type: none;
+            border-bottom: 1px solid #CCC;
+            &:hover {
+                color: #27620d;
+            }
+        }
+    }
+}
