@@ -18,7 +18,7 @@
     $kirjautumiset = $query->fetchAll();
 
     foreach($kirjautumiset as $key=>$kirjautuminen) { ?>
-        <tr>
+        <tr class="<?php echo ($key == 0 or $kirjautumiset[$key - 1]['kurssin_nimi'] != $kirjautumiset[$key]['kurssin_nimi']) ? 'otsake' : '' ?>">
             <td><?php
                     if ($key == 0 or $kirjautumiset[$key - 1]['kurssin_nimi'] != $kirjautumiset[$key]['kurssin_nimi']) {
                         echo htmlspecialchars($kirjautuminen['kurssin_nimi']);

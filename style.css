@@ -12,6 +12,22 @@ header, main {
     margin: 0 auto
 }
 
+table {
+    border-collapse: collapse;
+    th {
+        text-align: left;
+        border-bottom: 1px solid #888;
+    }
+    td {
+        padding: 0.25em;
+    }
+    tr.otsake td {
+        border-top: 1px solid #888;
+    }
+}
+
+
+
 section.kurssit {
     display: flex;
     flex-wrap: wrap;
