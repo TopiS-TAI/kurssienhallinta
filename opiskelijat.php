@@ -15,7 +15,12 @@
     <main>
     <h1>Kurssienhallinta: Opiskelijat</h1>
     <?php
-        include("opiskelijat-list.php");
+        if (!isset($_GET['id'])) {
+            include("opiskelijat-list.php");
+        } else {
+            echo '<a href="opiskelijat.php">Palaa listaan</a>';
+            include("opiskelija-info.php");
+        }
     ?>
     </main>
 </body>
