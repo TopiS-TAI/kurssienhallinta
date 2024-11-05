@@ -15,7 +15,12 @@
     <main>
     <h1>Kurssienhallinta: Tilat</h1>
     <?php
-        include("tilat-list.php");
+        if (isset($_GET['id'])) {
+            echo '<a href="tilat.php">Palaa listaan</a>';
+            include("tila-info.php");
+        } else {
+            include("tilat-list.php");
+        }
     ?>
     </main>
 </body>

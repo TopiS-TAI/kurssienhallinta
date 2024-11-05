@@ -24,6 +24,9 @@ table {
     tr.otsake td {
         border-top: 1px solid #888;
     }
+    tr.yli {
+        color: #800;
+    }
 }
 
 

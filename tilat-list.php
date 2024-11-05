@@ -14,7 +14,7 @@
 
     foreach($tilat as $tila) { ?>
         <tr>
-            <td><?php echo htmlspecialchars($tila['nimi']);?></td>
+            <td><a href="tilat.php?id=<?php echo $tila['id'] ?>"><?php echo htmlspecialchars($tila['nimi']);?></a></td>
         </tr>
     <?php }
 ?>
