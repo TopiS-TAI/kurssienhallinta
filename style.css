@@ -30,12 +30,34 @@ table {
 }
 
 table.calendar {
-    font-size: 0.8em;
+    caption {
+        text-align: left;
+        a {
+            text-decoration: none;
+        }
+    }
+
+    thead, tbody {
+        font-size: 0.8em;
+    }
+
     th {
         text-align: center;
     }
     td {
         background-color: #DDD;
+        &.course-1 { background-color: #ECA;}
+        &.course-2 { background-color: #AEC;}
+        &.course-3 { background-color: #CAE;}
+        &.course-4 { background-color: #ACE;}
+        &.course-5 { background-color: #EAC;}
+        &.course-6 { background-color: #CEA;}
+        &.course-7 { background-color: #ECC;}
+        &.course-8 { background-color: #CEC;}
+        &.course-9 { background-color: #CCE;}
+        &.course-10 { background-color: #CEE;}
+        &.course-11 { background-color: #ECE;}
+        &.course-12 { background-color: #EEC;}
     }
     td, th {
         border: 1px solid #666;
