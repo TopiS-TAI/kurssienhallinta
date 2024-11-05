@@ -23,19 +23,16 @@
 <h3>Kurssit:</h3>
 <?php
     if (count($courses)) {
-        echo "<ul>";
+        echo "<table><thead><tr><th>Kurssi</th><th>Aloituspäivä</th><th>Lopetuspäivä</th><th>Tila</th></tr></thead></tbody>";
         foreach ($courses as $course) {
-            echo "<li>";
-            echo htmlspecialchars($course['nimi']);
-            echo ' ';
-            echo date_format(date_create($course['aloituspaiva']), 'd.y.Y');
-            echo ' - ';
-            echo date_format(date_create($course['lopetuspaiva']), 'd.y.Y');
-            echo ' Tila: ';
-            echo htmlspecialchars($course['tilan_nimi']);
-            echo '</li>';
+            echo "<tr>";
+            echo "<td>" . htmlspecialchars($course['nimi']) . "</td>";
+            echo "<td>" . date_format(date_create($course['aloituspaiva']), 'd.m.Y') . "</td>";
+            echo "<td>" . date_format(date_create($course['lopetuspaiva']), 'd.m.Y') . "</td>";
+            echo "<td>" . htmlspecialchars($course['tilan_nimi']) . "</td>";
+            echo '</tr>';
         }
-        echo "</ul>";
+        echo "</tbody></table>";
     } else {
         echo "<p>Ei kursseja</p>";
     }

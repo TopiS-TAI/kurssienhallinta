@@ -23,9 +23,9 @@
             echo "<li>";
             echo htmlspecialchars($course['nimi']);
             echo ' ';
-            echo date_format(date_create($course['aloituspaiva']), 'd.y.Y');
+            echo date_format(date_create($course['aloituspaiva']), 'd.m.Y');
             echo ' - ';
-            echo date_format(date_create($course['lopetuspaiva']), 'd.y.Y');
+            echo date_format(date_create($course['lopetuspaiva']), 'd.m.Y');
             echo '</li>';
         }
         echo "</ul>";
