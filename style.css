@@ -29,6 +29,19 @@ table {
     }
 }
 
+table.calendar {
+    font-size: 0.8em;
+    th {
+        text-align: center;
+    }
+    td {
+        background-color: #DDD;
+    }
+    td, th {
+        border: 1px solid #666;
+    }
+}
+
 
 
 section.kurssit {
