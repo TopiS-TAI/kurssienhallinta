@@ -70,13 +70,13 @@
     <thead>
         <tr>
             <th></th>
-            <th colspan="2">Ma</th>
-            <th colspan="2">Ti</th>
-            <th colspan="2">Ke</th>
-            <th colspan="2">To</th>
-            <th colspan="2">Pe</th>
-            <th colspan="2">La</th>
-            <th colspan="2">Su</th>
+            <th colspan="<?php echo count($sess_list) ?>">Ma</th>
+            <th colspan="<?php echo count($sess_list) ?>">Ti</th>
+            <th colspan="<?php echo count($sess_list) ?>">Ke</th>
+            <th colspan="<?php echo count($sess_list) ?>">To</th>
+            <th colspan="<?php echo count($sess_list) ?>">Pe</th>
+            <th colspan="<?php echo count($sess_list) ?>">La</th>
+            <th colspan="<?php echo count($sess_list) ?>">Su</th>
         </tr>
     </thead>
     <tbody>
