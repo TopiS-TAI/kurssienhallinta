@@ -15,7 +15,12 @@
     <main>
     <h1>Kurssienhallinta: Opettajat</h1>
     <?php
-        include("opettajat-list.php");
+        if (isset($_GET['id'])) {
+            echo '<a href="opettajat.php">Palaa listaan</a>';
+            include("opettaja-info.php");
+        } else {
+            include("opettajat-list.php");
+        }
     ?>
     </main>
 </body>

@@ -15,7 +15,7 @@
 
     foreach($opettajat as $ope) { ?>
         <tr>
-            <td><?php echo htmlspecialchars($ope['etunimi'] . " " . $ope['sukunimi']);?></td>
+            <td><a href="opettajat.php?id=<?php echo $ope['id']; ?>"><?php echo htmlspecialchars($ope['etunimi'] . " " . $ope['sukunimi']);?></a></td>
             <td><?php echo htmlspecialchars($ope['aine']);?></td>
         </tr>
     <?php }
