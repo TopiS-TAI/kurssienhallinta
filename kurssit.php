@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Kukrssienhallinta</h2>
+    <h2>Kurssienhallinta</h2>
     <header>
         <?php
             include("nav.html");
