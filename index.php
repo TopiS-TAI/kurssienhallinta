@@ -14,6 +14,7 @@
     </header>
     <main>
         <h1>Kurssienhallinta</h1>
+        <h2>Muutos</h2>
     </main>
 </body>
 </html>
